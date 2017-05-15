@@ -2,6 +2,7 @@ version: '3'
 services:
   web:
     image: nginx:latest
+    restart: always
     ports:
       - "8080:80"
     volumes:
@@ -12,6 +13,7 @@ services:
 
   php:
     image: php:7-fpm
+    restart: always
     volumes:
       - ./code:/code
     networks:
